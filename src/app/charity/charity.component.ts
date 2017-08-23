@@ -21,7 +21,7 @@ export class CharityComponent implements OnInit {
 
   }
 
-  goToDetailPage(clickedCharity) {
+  goToCharityDetailPage(clickedCharity) {
     this.router.navigate(['charities', clickedCharity.$key]);
   };
 

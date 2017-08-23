@@ -1,6 +1,6 @@
 <div>
-  <h1>{{charityToDisplay.title}}</h1>
-  <h4>${{charityToDisplay.funding}}</h4>
-  <p>{{charityToDisplay.description}}</p>
-  <p>{{charityToDisplay.swag}}</p>
+  <h1>{{(charityToDisplay | async).title}}</h1>
+  <h4>${{(charityToDisplay | async).funding}}</h4>
+  <p>{{(charityToDisplay | async).description}}</p>
+  <p>{{(charityToDisplay | async).swag}}</p>
 </div>

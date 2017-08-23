@@ -1,6 +1,6 @@
 <div>
-  <h1>{{medicalToDisplay.title}}</h1>
-  <h4>${{medicalToDisplay.funding}}</h4>
-  <p>{{medicalToDisplay.description}}</p>
-  <p>{{medicalToDisplay.swag}}</p>
+  <h1>{{(medicalToDisplay | async).title}}</h1>
+  <h4>${{(medicalToDisplay | async).funding}}</h4>
+  <p>{{(medicalToDisplay | async).description}}</p>
+  <p>{{(medicalToDisplay | async).swag}}</p>
 </div>

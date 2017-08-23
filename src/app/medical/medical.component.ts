@@ -20,7 +20,7 @@ export class MedicalComponent implements OnInit {
     this.medicals = this.medicalService.getMedical();
   }
 
-  goToDetailPage(clickedMedical) {
+  goToMedicalDetailPage(clickedMedical) {
     this.router.navigate(['medicals', clickedMedical.$key]);
 
   };
