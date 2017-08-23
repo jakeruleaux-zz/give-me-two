@@ -17,6 +17,10 @@ const appRoutes: Routes = [
     component: AboutComponent
   },
   {
+    path: 'about',
+    component: AboutComponent
+  },
+  {
     path: 'contact',
     component: ContactComponent
   },
