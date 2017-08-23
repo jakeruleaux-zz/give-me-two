@@ -11,6 +11,11 @@ import { MedicalComponent } from './medical/medical.component';
 import { EducationComponent } from './education/education.component';
 import { CharityComponent } from './charity/charity.component';
 import { ContactComponent } from './contact/contact.component';
+import { AnimalDetailComponent } from './animal-detail/animal-detail.component';
+import { CharityDetailComponent } from './charity-detail/charity-detail.component';
+import { EducationDetailComponent } from './education-detail/education-detail.component';
+import { MedicalDetailComponent } from './medical-detail/medical-detail.component';
+import { LarryDetailComponent } from './larry-detail/larry-detail.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +25,12 @@ import { ContactComponent } from './contact/contact.component';
     MedicalComponent,
     EducationComponent,
     CharityComponent,
-    ContactComponent
+    ContactComponent,
+    AnimalDetailComponent,
+    CharityDetailComponent,
+    EducationDetailComponent,
+    MedicalDetailComponent,
+    LarryDetailComponent
   ],
   imports: [
     BrowserModule,
