@@ -11,14 +11,14 @@ import { CharityService } from '../charity.service';
   providers: [CharityService]
 })
 export class CharityDetailComponent implements OnInit {
-  charityId: number;
-  charityToDisplay: Cause;
+  charityId: string;
+  charityToDisplay;
 
   constructor(private route: ActivatedRoute, private location: Location, private charityService: CharityService) {}
 
   ngOnInit() {
    this.route.params.forEach((urlParameters) => {
-     this.charityId = parseInt(urlParameters['id']);
+     this.charityId = urlParameters['id'];
    });
    this.charityToDisplay = this.charityService.getCharityById(this.charityId);
    }

@@ -1,22 +1,23 @@
 import { Injectable } from '@angular/core';
 import { Cause } from './cause.model';
 import { MEDICALS } from './medical-data';
+import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
+
 
 @Injectable()
 export class MedicalService {
+  medicals: FirebaseListObservable<any[]>;
 
-  constructor() { }
+  constructor(private database: AngularFireDatabase) {
+    this.medicals = database.list('medicals');
+ }
 
-  getMedical(){
-    return MEDICALS;
+  getMedical() {
+    return this.medicals;
   }
 
-  getMedicalById(medicalId: number){
-    for (var i = 0; i <= MEDICALS.length - 1; i++) {
-      if (MEDICALS[i].id === medicalId) {
-        return MEDICALS[i];
-      }
-    }
+  getMedicalById(medicalId) {
+    return this.database.object('medicals/' + medicalId);
   }
 
 }

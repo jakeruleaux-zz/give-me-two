@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Cause } from '../cause.model';
 import { Router } from '@angular/router';
 import { MedicalService } from '../medical.service';
+import { FirebaseListObservable } from 'angularfire2/database';
+
 
 @Component({
   selector: 'app-medical',
@@ -10,7 +12,7 @@ import { MedicalService } from '../medical.service';
   providers: [MedicalService]
 })
 export class MedicalComponent implements OnInit {
-  medicals: Cause[];
+  medicals: FirebaseListObservable<any[]>;
 
   constructor(private router: Router, private medicalService: MedicalService) { }
 
@@ -18,8 +20,8 @@ export class MedicalComponent implements OnInit {
     this.medicals = this.medicalService.getMedical();
   }
 
-  goToDetailPage(clickedMedical: Cause) {
-    console.log(clickedMedical);
-    this.router.navigate(['medicals', clickedMedical.id]);
+  goToDetailPage(clickedMedical) {
+    this.router.navigate(['medicals', clickedMedical.$key]);
+
   };
 }

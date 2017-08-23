@@ -1,22 +1,23 @@
 import { Injectable } from '@angular/core';
 import { Cause } from './cause.model';
-import { EDUCATIONS } from './education-data';
+// import { EDUCATIONS } from './education-data';
+import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
+
 
 @Injectable()
 export class EducationService {
+  educations: FirebaseListObservable<any[]>;
 
-  constructor() { }
+  constructor(private database: AngularFireDatabase) {
+    this.educations = database.list('educations');
+ }
 
   getEducation( ) {
-    return EDUCATIONS;
+    return this.educations;
   }
 
-  getEducationById(educationId: number){
-    for (var i = 0; i <= EDUCATIONS.length - 1; i++) {
-      if (EDUCATIONS[i].id === educationId) {
-        return EDUCATIONS[i];
-      }
-    }
+  getEducationById(educationId) {
+    return this.database.object('educations/' + educationId);
   }
 
 }

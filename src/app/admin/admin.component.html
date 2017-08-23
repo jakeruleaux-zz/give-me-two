@@ -1,0 +1,31 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3>Add New Cry for Help</h3>
+    <div>
+      <div>
+        <label>Title:</label>
+        <br>
+        <input #newTitle>
+      </div>
+
+      <div>
+        <label>Description:</label>
+        <br>
+        <textarea #newDescription></textarea>
+      </div>
+
+      <div>
+        <label>Funding:</label>
+        <br>
+        <input #newFunding>
+      </div>
+
+      <div>
+        <label>Swag:</label>
+        <br>
+        <input #newSwag>
+      </div>
+      <button (click)="submitForm(newTitle.value, newDescription.value, newFunding.value, newSwag.value); newTitle.value=''; newDescription.value=''; newFunding.value=''; newSwag.value=''; ">Add</button>
+    </div>
+  </div>
+</div>

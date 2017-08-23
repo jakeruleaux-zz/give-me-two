@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Cause } from '../cause.model';
 import { Router } from '@angular/router';
 import { CharityService } from '../charity.service';
+import { FirebaseListObservable } from 'angularfire2/database';
 
 
 @Component({
@@ -11,7 +12,7 @@ import { CharityService } from '../charity.service';
   providers: [CharityService]
 })
 export class CharityComponent implements OnInit {
-  charities: Cause[];
+  charities: FirebaseListObservable<any[]>;
 
   constructor(private router: Router, private charityService: CharityService) { }
 
@@ -20,8 +21,8 @@ export class CharityComponent implements OnInit {
 
   }
 
-  goToDetailPage(clickedCharity: Cause) {
-    this.router.navigate(['charities', clickedCharity.id]);
+  goToDetailPage(clickedCharity) {
+    this.router.navigate(['charities', clickedCharity.$key]);
   };
 
 

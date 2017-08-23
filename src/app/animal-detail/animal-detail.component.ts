@@ -12,14 +12,14 @@ import { AnimalsService } from '../animals.service';
 
 })
 export class AnimalDetailComponent implements OnInit {
-  animalId: number;
-  animalToDisplay: Cause;
+  animalId: string;
+  animalToDisplay;
 
   constructor(private route: ActivatedRoute, private location: Location, private animalService: AnimalsService) {}
 
   ngOnInit() {
    this.route.params.forEach((urlParameters) => {
-     this.animalId = parseInt(urlParameters['id']);
+     this.animalId = urlParameters['id'];
    });
    this.animalToDisplay = this.animalService.getAnimalById(this.animalId);
    }

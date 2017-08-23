@@ -11,14 +11,14 @@ import { MedicalService } from '../medical.service';
   providers: [MedicalService]
 })
 export class MedicalDetailComponent implements OnInit {
-  medicalId: number;
-  medicalToDisplay: Cause;
+  medicalId: string;
+  medicalToDisplay;
 
   constructor(private route: ActivatedRoute, private location: Location, private medicalService: MedicalService) {}
 
   ngOnInit() {
    this.route.params.forEach((urlParameters) => {
-     this.medicalId = parseInt(urlParameters['id']);
+     this.medicalId = urlParameters['id'];
    });
    this.medicalToDisplay = this.medicalService.getMedicalById(this.medicalId);
 

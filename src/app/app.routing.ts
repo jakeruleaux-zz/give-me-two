@@ -1,4 +1,4 @@
-import { ModuleWithProviders }  from '@angular/core';
+import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AboutComponent } from './about/about.component';
 import { AnimalsComponent } from './animals/animals.component';
@@ -10,6 +10,8 @@ import { AnimalDetailComponent } from './animal-detail/animal-detail.component';
 import { CharityDetailComponent } from './charity-detail/charity-detail.component';
 import { EducationDetailComponent } from './education-detail/education-detail.component';
 import { MedicalDetailComponent } from './medical-detail/medical-detail.component';
+import { AdminComponent }   from './admin/admin.component';
+
 
 const appRoutes: Routes = [
   {
@@ -55,7 +57,11 @@ const appRoutes: Routes = [
  {
    path: 'educations/:id',
    component: EducationDetailComponent
- }
+ },
+ {
+  path: 'admin',
+  component: AdminComponent
+}
 ];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Cause } from '../cause.model';
 import { Router } from '@angular/router';
 import { EducationService } from '../education.service';
+import { FirebaseListObservable } from 'angularfire2/database';
 
 
 @Component({
@@ -11,7 +12,7 @@ import { EducationService } from '../education.service';
   providers: [EducationService]
 })
 export class EducationComponent implements OnInit {
-  educations: Cause[];
+  educations: FirebaseListObservable<any[]>;
 
   constructor(private router: Router, private educationService: EducationService) { }
 
@@ -19,8 +20,8 @@ export class EducationComponent implements OnInit {
     this.educations = this.educationService.getEducation();
 
   }
-  goToDetailPage(clickedEducation: Cause) {
-    this.router.navigate(['educations', clickedEducation.id]);
+  goToEducationDetailPage(clickedEducation) {
+    this.router.navigate(['educations', clickedEducation.$key]);
   };
 
 

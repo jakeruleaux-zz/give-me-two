@@ -11,14 +11,14 @@ import { EducationService } from '../education.service';
   providers: [EducationService]
 })
 export class EducationDetailComponent implements OnInit {
-  educationId: number;
-  educationToDisplay: Cause;
+  educationId: string;
+  educationToDisplay;
 
   constructor(private route: ActivatedRoute, private location: Location, private educationService: EducationService) {}
 
   ngOnInit() {
    this.route.params.forEach((urlParameters) => {
-     this.educationId = parseInt(urlParameters['id']);
+     this.educationId = urlParameters['id'];
    });
    this.educationToDisplay = this.educationService.getEducationById(this.educationId);
    }

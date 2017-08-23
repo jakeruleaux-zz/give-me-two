@@ -1,6 +1,6 @@
 <div>
-  <h1>{{animalToDisplay.title}}</h1>
-  <h4>${{animalToDisplay.funding}}</h4>
-  <p>{{animalToDisplay.description}}</p>
-  <p>{{animalToDisplay.swag}}</p>
+  <h1>{{(animalToDisplay | async).title}}</h1>
+  <h4>${{(animalToDisplay | async).funding}}</h4>
+  <p>{{(animalToDisplay | async).description}}</p>
+  <p>You'll get a {{(animalToDisplay | async).swag}} as a reward</p>
 </div>

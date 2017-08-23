@@ -1,20 +1,81 @@
-{"animals": [{
-  "title": "Little Sally's Little Alligator",
-  "description": "Little Sally's alligator Gerald needs a new tail or he'll die.",
-  "funding": 48029,
-  "swag": "hat",
-  "id":  "1"
-  }, {
+{
+  "animals": [{
+    "title": "Little Sally's Little Alligator",
+    "description": "Little Sally's alligator Gerald needs a new tail or he'll die.",
+    "funding": 48029,
+    "swag": "hat",
+    "id":  "1"
+    }, {
     "title": "My Neighbor's bird",
     "description": "The guys next door have a bird that screams all night. I need money to hire a bird hitman.",
     "funding": 13902,
     "swag": "hat with a feather",
     "id": "2"
-  }, {
+    }, {
     "title": "Cat in a tree",
     "descrition": "There's a cat in a tree. You've seen it before. It's not that special.",
     "funding": 980228,
     "swag": "the cat",
     "id": "3"
+  }],
+
+  "educations": [{
+    "title": "I wanna go to Harvard. Or PCC.",
+    "description": "Please help. I'm a poor little boy with no future unless you pay for me to go to college.",
+    "funding": 418029,
+    "swag": "bag of chips",
+    "id":  "1"
+    }, {
+    "title": "School is for fools",
+    "description": "Give me money. Maybe I'll go to school... maybe I won't.",
+    "funding": 50000,
+    "swag": "nothing",
+    "id":  "2"
+    }, {
+    "title": "Jake needs some schoolin",
+    "description": "Just look at him.",
+    "funding": 48029,
+    "swag": "a new house",
+    "id":  "3"
+  }],
+
+  "charities": [{
+    "title": "I want money",
+    "description": "Give me more.",
+    "funding": 100,
+    "swag": "HIV",
+    "id":  "1"
+    }, {
+    "title": "I need stuff",
+    "description": "give me stuff.",
+    "funding": 50000,
+    "swag": "beans",
+    "id":  "2"
+    }, {
+    "title": "POOP",
+    "description": "Just give me",
+    "funding": 48029,
+    "swag": "a pun",
+    "id":  "3"
+  }],
+
+  "medicals": [{
+    "title": "I need a leg.",
+    "description": "Please help. I cant dance.",
+    "funding": 41829,
+    "swag": "bag of dudes",
+    "id":  "1"
+    }, {
+    "title": "Doctor says ",
+    "description": "maybe I won't.",
+    "funding": 500,
+    "swag": "no its nothing",
+    "id":  "2"
+    }, {
+    "title": "plip lin",
+    "description": "Just smile",
+    "funding": 480,
+    "swag": "a new mouse",
+    "id":  "3"
   }]
 }

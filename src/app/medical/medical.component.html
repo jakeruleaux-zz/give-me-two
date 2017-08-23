@@ -1,4 +1,4 @@
 
-<div *ngFor='let cause of medicals' (click)='goToDetailPage(cause)'>
+<div *ngFor='let cause of medicals | async' (click)='goToDetailPage(cause)'>
   <h4>{{cause.title}}</h4>
 </div>
