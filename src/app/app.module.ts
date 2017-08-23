@@ -15,7 +15,7 @@ import { AnimalDetailComponent } from './animal-detail/animal-detail.component';
 import { CharityDetailComponent } from './charity-detail/charity-detail.component';
 import { EducationDetailComponent } from './education-detail/education-detail.component';
 import { MedicalDetailComponent } from './medical-detail/medical-detail.component';
-import { LarryDetailComponent } from './larry-detail/larry-detail.component';
+
 
 @NgModule({
   declarations: [
@@ -30,7 +30,7 @@ import { LarryDetailComponent } from './larry-detail/larry-detail.component';
     CharityDetailComponent,
     EducationDetailComponent,
     MedicalDetailComponent,
-    LarryDetailComponent
+  
   ],
   imports: [
     BrowserModule,
