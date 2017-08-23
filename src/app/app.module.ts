@@ -18,7 +18,7 @@ import { MedicalDetailComponent } from './medical-detail/medical-detail.componen
 import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
-import { AdminComponent } from './admin/admin.component';
+import { AnimalAdminComponent } from './animal-admin/animal-admin.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -41,7 +41,7 @@ export const firebaseConfig = {
     CharityDetailComponent,
     EducationDetailComponent,
     MedicalDetailComponent,
-    AdminComponent,
+    AnimalAdminComponent,
 
   ],
   imports: [

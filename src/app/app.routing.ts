@@ -10,7 +10,7 @@ import { AnimalDetailComponent } from './animal-detail/animal-detail.component';
 import { CharityDetailComponent } from './charity-detail/charity-detail.component';
 import { EducationDetailComponent } from './education-detail/education-detail.component';
 import { MedicalDetailComponent } from './medical-detail/medical-detail.component';
-import { AdminComponent }   from './admin/admin.component';
+import { AnimalAdminComponent }   from './animal-admin/animal-admin.component';
 
 
 const appRoutes: Routes = [
@@ -59,8 +59,8 @@ const appRoutes: Routes = [
    component: EducationDetailComponent
  },
  {
-  path: 'admin',
-  component: AdminComponent
+  path: 'animal-admin',
+  component: AnimalAdminComponent
 }
 ];
 
