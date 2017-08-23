@@ -1,4 +1,4 @@
 
-<div *ngFor='let education of educations'>
-  <h4>{{education.title}}</h4>
+<div *ngFor='let cause of educations' (click)='goToDetailPage(cause)'>
+  <h4>{{cause.title}}</h4>
 </div>

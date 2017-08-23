@@ -18,7 +18,7 @@ export class AnimalsComponent implements OnInit {
     this.animals = this.animalsService.getAnimals();
   }
 
-  goToDetailPage(clickedAnimal: Cause) {
-    this.router.navigate(['animals', clickedAnimal.id]);
+  goToAnimalDetailPage(clickedCause: Cause) {
+    this.router.navigate(['animals', clickedCause.id]);
   };
 }

@@ -1,5 +1,5 @@
 <h2>Animal causes</h2>
 
-<div *ngFor='let animal of animals'>
-  <h4>{{animal.title}}</h4>
+<div *ngFor='let cause of animals' (click)='goToAnimalDetailPage(cause)'>
+  <h4>{{cause.title}}</h4>
 </div>

@@ -6,6 +6,10 @@ import { MedicalComponent } from './medical/medical.component';
 import { EducationComponent } from './education/education.component';
 import { CharityComponent } from './charity/charity.component';
 import { ContactComponent } from './contact/contact.component';
+import { AnimalDetailComponent } from './animal-detail/animal-detail.component';
+import { CharityDetailComponent } from './charity-detail/charity-detail.component';
+import { EducationDetailComponent } from './education-detail/education-detail.component';
+import { MedicalDetailComponent } from './medical-detail/medical-detail.component';
 
 const appRoutes: Routes = [
   {
@@ -31,7 +35,23 @@ const appRoutes: Routes = [
   {
     path: 'medical',
     component: MedicalComponent
-  }
+  },
+  {
+   path: 'animals/:id',
+   component: AnimalDetailComponent
+ },
+ {
+   path: 'charities/:id',
+   component: CharityDetailComponent
+ },
+ {
+   path: 'medicals/:id',
+   component: MedicalDetailComponent
+ },
+ {
+   path: 'educations/:id',
+   component: EducationDetailComponent
+ }
 ];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);

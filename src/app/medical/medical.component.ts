@@ -19,6 +19,7 @@ export class MedicalComponent implements OnInit {
   }
 
   goToDetailPage(clickedMedical: Cause) {
+    console.log(clickedMedical);
     this.router.navigate(['medicals', clickedMedical.id]);
   };
 }

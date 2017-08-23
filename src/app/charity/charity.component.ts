@@ -21,7 +21,7 @@ export class CharityComponent implements OnInit {
   }
 
   goToDetailPage(clickedCharity: Cause) {
-    this.router.navigate(['charity', clickedCharity.id]);
+    this.router.navigate(['charities', clickedCharity.id]);
   };
 
 

@@ -20,7 +20,7 @@ export class MedicalDetailComponent implements OnInit {
    this.route.params.forEach((urlParameters) => {
      this.medicalId = parseInt(urlParameters['id']);
    });
-   this.albumToDisplay = this.albumService.getAlbumById(this.albumId);
+   this.medicalToDisplay = this.medicalService.getMedicalById(this.medicalId);
 
   }
 
