@@ -15,7 +15,7 @@ export class MedicalComponent implements OnInit {
   constructor(private router: Router, private medicalService: MedicalService) { }
 
   ngOnInit() {
-    this.medical = this.medicalService.getMedical();
+    this.medicals = this.medicalService.getMedical();
   }
 
   goToDetailPage(clickedMedical: Cause) {

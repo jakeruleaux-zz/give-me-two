@@ -16,7 +16,7 @@ export class CharityComponent implements OnInit {
   constructor(private router: Router, private charityService: CharityService) { }
 
   ngOnInit() {
-    this.charity = this.charityService.getCharity();
+    this.charities = this.charityService.getCharity();
 
   }
 

@@ -10,4 +10,13 @@ export class MedicalService {
   getMedical(){
     return MEDICALS;
   }
+
+  getMedicalById(medicalId: number){
+    for (var i = 0; i <= MEDICALS.length - 1; i++) {
+      if (MEDICALS[i].id === medicalId) {
+        return MEDICALS[i];
+      }
+    }
+  }
+
 }

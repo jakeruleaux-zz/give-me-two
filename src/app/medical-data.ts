@@ -1,4 +1,4 @@
-import { Cause } form './cause/model';
+import { Cause } from './cause.model';
 
 export const MEDICALS: Cause[] = [
   new Cause("animal", "Little Sally's Little Alligator", "Little Sally's alligator Gerald needs a new tail or he'll die.", 48029, "hat", 1),

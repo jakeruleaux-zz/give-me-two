@@ -11,4 +11,11 @@ export class AnimalsService {
     return ANIMALS;
   }
 
+  getAnimalById(animalId: number){
+   for (var i = 0; i <= ANIMALS.length - 1; i++) {
+     if (ANIMALS[i].id === animalId) {
+       return ANIMALS[i];
+     }
+   }
+ }
 }

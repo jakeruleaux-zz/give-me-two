@@ -9,4 +9,13 @@ export class CharityService {
   getCharity() {
     return CHARITIES;
   }
+
+  getCharityById(charityId: number){
+    for (var i = 0; i <= CHARITIES.length - 1; i++) {
+      if (CHARITIES[i].id === charityId) {
+        return CHARITIES[i];
+      }
+    }
+  }
+
 }

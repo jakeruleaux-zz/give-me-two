@@ -16,7 +16,7 @@ export class EducationComponent implements OnInit {
   constructor(private router: Router, private educationService: EducationService) { }
 
   ngOnInit() {
-    this.education = this.educationService.getEducation();
+    this.educations = this.educationService.getEducation();
 
   }
   goToDetailPage(clickedEducation: Cause) {
