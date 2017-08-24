@@ -22,6 +22,10 @@ import { AnimalAdminComponent } from './animal-admin/animal-admin.component';
 import { EditAnimalsComponent } from './edit-animals/edit-animals.component';
 import { CharityAdminComponent } from './charity-admin/charity-admin.component';
 import { EditCharityComponent } from './edit-charity/edit-charity.component';
+import { EditEducationComponent } from './edit-education/edit-education.component';
+import { EducationAdminComponent } from './education-admin/education-admin.component';
+import { EditMedicalComponent } from './edit-medical/edit-medical.component';
+import { MedicalAdminComponent } from './medical-admin/medical-admin.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -48,6 +52,10 @@ export const firebaseConfig = {
     EditAnimalsComponent,
     CharityAdminComponent,
     EditCharityComponent,
+    EditEducationComponent,
+    EducationAdminComponent,
+    EditMedicalComponent,
+    MedicalAdminComponent,
 
   ],
   imports: [

@@ -19,5 +19,21 @@ export class EducationService {
   getEducationById(educationId) {
     return this.database.object('educations/' + educationId);
   }
+  updateCause(localUpdatedCause){
+     var causeEntryInFirebase = this.getEducationById(localUpdatedCause.$key);
+     causeEntryInFirebase.update({title: localUpdatedCause.title,
+                                 description: localUpdatedCause.description,
+                                 funding: localUpdatedCause.funding,
+                                 swag: localUpdatedCause.swag
+                                 });
+   }
 
+   deleteCause(localCauseToDelete){
+    var causeEntryInFirebase = this.getEducationById(localCauseToDelete.$key);
+    causeEntryInFirebase.remove();
+  }
+
+  addEducation(newEducation: Cause) {
+     this.educations.push(newEducation);
+   }
 }

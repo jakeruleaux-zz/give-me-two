@@ -4,7 +4,6 @@ import { Router } from '@angular/router';
 import { CharityService } from '../charity.service';
 import { FirebaseListObservable } from 'angularfire2/database';
 
-
 @Component({
   selector: 'app-charity',
   templateUrl: './charity.component.html',

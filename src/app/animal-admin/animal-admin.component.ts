@@ -1,8 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { AnimalsService } from '../animals.service';
-// import { CharityService } from '../charity.service';
-// import { EducationService } from '../education.service';
-// import { MedicalService } from '../medical.service';
 import { Cause } from '../cause.model';
 
 @Component({
@@ -10,9 +7,6 @@ import { Cause } from '../cause.model';
   templateUrl: './animal-admin.component.html',
   styleUrls: ['./animal-admin.component.css'],
   providers: [AnimalsService],
-  // providers: [CharityService],
-  // providers: [EducationService],
-  // providers: [MedicalService]
 })
 export class AnimalAdminComponent implements OnInit {
 
@@ -25,6 +19,4 @@ export class AnimalAdminComponent implements OnInit {
     let newAnimal: Cause = new Cause(title, description, funding, swag, id);
     this.animalsService.addAnimal(newAnimal);
   }
-
-
 }

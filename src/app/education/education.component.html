@@ -1,4 +1,13 @@
+<h2>Education</h2>
 
-<div *ngFor='let education of educations | async' (click)='goToEducationDetailPage(education)'>
-  <h4>{{education.title}}</h4>
+<div *ngFor='let education of educations | async'>
+  <h4 (click)='goToEducationDetailPage(education)'>{{education.title}}</h4>
+  <div *ngIf="currentRoute === '/education-admin'">
+    {{education.title}}<br>
+    {{education.description}}<br>
+    {{education.funding}}<br>
+    {{education.swag}}
+    <hr>
+    <app-edit-education [selectedEducation]='education'></app-edit-education>
+  </div>
 </div>

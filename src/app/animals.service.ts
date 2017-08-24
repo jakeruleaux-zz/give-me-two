@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Cause } from './cause.model';
-import { ANIMALS } from './animal-data';
+// import { ANIMALS } from './animal-data';
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 
 

@@ -1,0 +1,17 @@
+<h3>Edit Education</h3>
+
+<label>New title:</label>
+<input [(ngModel)]='selectedEducation.title'>
+<br>
+<label>New description:</label>
+<input [(ngModel)]='selectedEducation.description'>
+<br>
+<label>New funding:</label>
+<input [(ngModel)]='selectedEducation.funding'>
+<br>
+<label>New swag:</label>
+<input [(ngModel)]='selectedEducation.swag'>
+<br>
+<button (click)="beginUpdatingCause(selectedEducation)">Update</button>
+<button (click)="beginDeletingCause(selectedEducation)">Delete</button>
+<hr>

@@ -20,4 +20,22 @@ export class MedicalService {
     return this.database.object('medicals/' + medicalId);
   }
 
+  updateCause(localUpdatedCause){
+     var causeEntryInFirebase = this.getMedicalById(localUpdatedCause.$key);
+     causeEntryInFirebase.update({title: localUpdatedCause.title,
+                                 description: localUpdatedCause.description,
+                                 funding: localUpdatedCause.funding,
+                                 swag: localUpdatedCause.swag
+                                 });
+   }
+
+   deleteCause(localCauseToDelete){
+    var causeEntryInFirebase = this.getMedicalById(localCauseToDelete.$key);
+    causeEntryInFirebase.remove();
+  }
+
+  addMedical(newMedical: Cause) {
+     this.medicals.push(newMedical);
+   }
+
 }

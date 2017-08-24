@@ -1,4 +1,12 @@
+<h2>Medical Issues</h2>
 
-<div *ngFor='let medical of medicals | async' (click)='goToMedicalDetailPage(medical)'>
-  <h4>{{medical.title}}</h4>
+<div *ngFor='let medical of medicals | async'>
+  <h4 (click)='goToMedicalDetailPage(medical)'>{{medical.title}}</h4>  <div *ngIf="currentRoute === '/medical-admin'">
+    {{medical.title}}<br>
+    {{medical.description}}<br>
+    {{medical.funding}}<br>
+    {{medical.swag}}
+    <hr>
+    <app-edit-medical [selectedMedical]='medical'></app-edit-medical>
+  </div>
 </div>

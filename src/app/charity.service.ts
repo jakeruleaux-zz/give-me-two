@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Cause } from './cause.model';
-import { CHARITIES } from './charity-data';
+// import { CHARITIES } from './charity-data';
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 
 @Injectable()

@@ -1,0 +1,17 @@
+<h3>Edit Medicals</h3>
+
+<label>New title:</label>
+<input [(ngModel)]='selectedMedical.title'>
+<br>
+<label>New description:</label>
+<input [(ngModel)]='selectedMedical.description'>
+<br>
+<label>New funding:</label>
+<input [(ngModel)]='selectedMedical.funding'>
+<br>
+<label>New swag:</label>
+<input [(ngModel)]='selectedMedical.swag'>
+<br>
+<button (click)="beginUpdatingCause(selectedMedical)">Update</button>
+<button (click)="beginDeletingCause(selectedMedical)">Delete</button>
+<hr>
