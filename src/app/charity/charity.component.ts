@@ -13,6 +13,7 @@ import { FirebaseListObservable } from 'angularfire2/database';
 })
 export class CharityComponent implements OnInit {
   charities: FirebaseListObservable<any[]>;
+  currentRoute: string = this.router.url;
 
   constructor(private router: Router, private charityService: CharityService) { }
 

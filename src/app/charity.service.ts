@@ -18,5 +18,19 @@ export class CharityService {
   getCharityById(charityId) {
       return this.database.object('charities/' + charityId);
   }
-
+  updateCause(localUpdatedCause){
+     var causeEntryInFirebase = this.getCharityById(localUpdatedCause.$key);
+     causeEntryInFirebase.update({title: localUpdatedCause.title,
+                                 description: localUpdatedCause.description,
+                                 funding: localUpdatedCause.funding,
+                                 swag: localUpdatedCause.swag
+                                 });
+   }
+   deleteCause(localCauseToDelete){
+    var causeEntryInFirebase = this.getCharityById(localCauseToDelete.$key);
+    causeEntryInFirebase.remove();
+   }
+   addCharity(newCharity: Cause) {
+      this.charities.push(newCharity);
+    }
 }

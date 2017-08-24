@@ -20,6 +20,8 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AnimalAdminComponent } from './animal-admin/animal-admin.component';
 import { EditAnimalsComponent } from './edit-animals/edit-animals.component';
+import { CharityAdminComponent } from './charity-admin/charity-admin.component';
+import { EditCharityComponent } from './edit-charity/edit-charity.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -44,6 +46,8 @@ export const firebaseConfig = {
     MedicalDetailComponent,
     AnimalAdminComponent,
     EditAnimalsComponent,
+    CharityAdminComponent,
+    EditCharityComponent,
 
   ],
   imports: [

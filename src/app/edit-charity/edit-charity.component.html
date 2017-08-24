@@ -1,0 +1,17 @@
+<h3>Edit Charities</h3>
+
+<label>New title:</label>
+<input [(ngModel)]='selectedCharity.title'>
+<br>
+<label>New description:</label>
+<input [(ngModel)]='selectedCharity.description'>
+<br>
+<label>New funding:</label>
+<input [(ngModel)]='selectedCharity.funding'>
+<br>
+<label>New swag:</label>
+<input [(ngModel)]='selectedCharity.swag'>
+<br>
+<button (click)="beginUpdatingCause(selectedCharity)">Update</button>
+<hr>
+<button (click)="beginDeletingCause(selectedCharity)">Delete</button>

@@ -11,6 +11,7 @@ import { CharityDetailComponent } from './charity-detail/charity-detail.componen
 import { EducationDetailComponent } from './education-detail/education-detail.component';
 import { MedicalDetailComponent } from './medical-detail/medical-detail.component';
 import { AnimalAdminComponent }   from './animal-admin/animal-admin.component';
+import { CharityAdminComponent }   from './charity-admin/charity-admin.component';
 
 
 const appRoutes: Routes = [
@@ -61,6 +62,10 @@ const appRoutes: Routes = [
  {
   path: 'animal-admin',
   component: AnimalAdminComponent
+},
+{
+ path: 'charity-admin',
+ component: CharityAdminComponent
 }
 ];
 

@@ -1,3 +1,13 @@
-<div *ngFor='let charity of charities | async' (click)='goToCharityDetailPage(charity)'>
-  <h4>{{charity.title}}</h4>
+<h2>Charities</h2>
+
+<div *ngFor='let charity of charities | async'>
+  <h4 (click)='goToCharityDetailPage(charity)'>{{charity.title}}</h4>
+  <div *ngIf="currentRoute === '/charity-admin'">
+    {{charity.title}}<br>
+    {{charity.description}}<br>
+    {{charity.funding}}<br>
+    {{charity.swag}}
+    <hr>
+    <app-edit-charity [selectedCharity]='charity'></app-edit-charity>
+  </div>
 </div>
