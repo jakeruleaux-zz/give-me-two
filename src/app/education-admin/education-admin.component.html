@@ -26,11 +26,6 @@
         <input #newSwag>
       </div>
 
-      <div>
-        <label>Id:</label>
-        <br>
-        <input #newId>
-      </div>
       <button (click)="submitForm(newTitle.value, newDescription.value, newFunding.value, newSwag.value, newId.value); newTitle.value=''; newDescription.value=''; newFunding.value=''; newSwag.value=''; newId.value=''; ">Add</button>
     </div>
   </div>

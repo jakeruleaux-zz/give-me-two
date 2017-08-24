@@ -10,10 +10,11 @@ import { AnimalDetailComponent } from './animal-detail/animal-detail.component';
 import { CharityDetailComponent } from './charity-detail/charity-detail.component';
 import { EducationDetailComponent } from './education-detail/education-detail.component';
 import { MedicalDetailComponent } from './medical-detail/medical-detail.component';
-import { AnimalAdminComponent }   from './animal-admin/animal-admin.component';
-import { CharityAdminComponent }   from './charity-admin/charity-admin.component';
-import { EducationAdminComponent }   from './education-admin/education-admin.component';
+import { AnimalAdminComponent } from './animal-admin/animal-admin.component';
+import { CharityAdminComponent } from './charity-admin/charity-admin.component';
+import { EducationAdminComponent } from './education-admin/education-admin.component';
 import { MedicalAdminComponent } from './medical-admin/medical-admin.component';
+import { DonationComponent } from './donation/donation.component';
 
 
 const appRoutes: Routes = [
@@ -77,6 +78,10 @@ const appRoutes: Routes = [
  path: 'medical-admin',
  component: MedicalAdminComponent
 },
+{
+  path: 'donation',
+  component: DonationComponent
+}
 ];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);

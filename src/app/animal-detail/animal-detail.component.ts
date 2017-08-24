@@ -4,6 +4,7 @@ import { Location } from '@angular/common';
 import { Cause } from '../cause.model';
 import { AnimalsService } from '../animals.service';
 
+
 @Component({
   selector: 'app-animal-detail',
   templateUrl: './animal-detail.component.html',
@@ -23,6 +24,8 @@ export class AnimalDetailComponent implements OnInit {
    });
    this.animalToDisplay = this.animalService.getAnimalById(this.animalId);
    }
+
+
 
 
 }

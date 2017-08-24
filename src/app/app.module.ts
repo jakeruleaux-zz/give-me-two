@@ -26,6 +26,7 @@ import { EditEducationComponent } from './edit-education/edit-education.componen
 import { EducationAdminComponent } from './education-admin/education-admin.component';
 import { EditMedicalComponent } from './edit-medical/edit-medical.component';
 import { MedicalAdminComponent } from './medical-admin/medical-admin.component';
+import { DonationComponent } from './donation/donation.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -56,6 +57,7 @@ export const firebaseConfig = {
     EducationAdminComponent,
     EditMedicalComponent,
     MedicalAdminComponent,
+    DonationComponent,
 
   ],
   imports: [
