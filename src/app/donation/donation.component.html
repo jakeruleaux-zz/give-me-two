@@ -1,7 +1,9 @@
 <div class="well">
   <h4>Give them money:</h4>
   <label>Amount: $</label>
-  <input [(ngModel)]='newFundage.total'>
-  <button (click)='donateButton'>Give</button>
-  <p>{{newFundage.total}}</p>
+  <input #newTotal>
+  <button (click)="donateButton(newTotal.value); newTotal.value='';">Give</button>
+  <!-- <div *ngFor='let fundage of fundages'>
+  </div> -->
+  <p>Given: $ {{somethingDifferent.total}}</p>
 </div>

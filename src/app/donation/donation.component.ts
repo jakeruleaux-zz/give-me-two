@@ -12,19 +12,22 @@ import { FirebaseListObservable } from 'angularfire2/database';
   providers: [FundageService]
 })
 export class DonationComponent implements OnInit {
-  // fundage: FirebaseListObservable<any[]>;
+  fundages: FirebaseListObservable<any[]>;
+  fundageId: string;
+  fundagesToDisplay;
+  somethingDifferent;
 
   constructor(private router: Router, private fundageService: FundageService) { }
 
-  newFundage: Fundage = new Fundage(0);
 
   ngOnInit() {
-    console.log(this.newFundage);
+    this.fundagesToDisplay = this.fundageService.getFundageById(this.fundageId);
   }
 
   donateButton(total: number) {
-    let newSum: Fundage = new Fundage(total);
-    console.log(newSum);
-    this.fundageService.addSum(newSum);
+    let newFundage: Fundage = new Fundage(total);
+    console.log(newFundage);
+    this.fundageService.addFundage(newFundage);
+    this.somethingDifferent = newFundage;
   }
 }

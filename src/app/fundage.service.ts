@@ -1,22 +1,27 @@
 import { Injectable } from '@angular/core';
 import { Fundage } from './fundage.model';
-import { FUNDAGE } from './donation-data';
+// import { FUNDAGE } from './donation-data';
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 
 @Injectable()
 export class FundageService {
-  fundage: FirebaseListObservable<any[]>;
+  fundages: FirebaseListObservable<any[]>;
 
   constructor(private database: AngularFireDatabase) {
-    this.fundage = database.list('fundage');
+    this.fundages = database.list('fundages');
 }
 
-  getFundage() {
-    return this.fundage;
+  getFundages() {
+    return this.fundages;
   }
 
-  addSum(newSum: Fundage) {
-     this.fundage.push(newSum);
+  addFundage(newFundage: Fundage) {
+    // console.log(newFundage);
+     this.fundages.push(newFundage);
    }
+
+   getFundageById(fundageId) {
+     return this.database.object('fundages/' + fundageId);
+  }
 
 }
