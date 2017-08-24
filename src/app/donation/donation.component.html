@@ -1,6 +1,7 @@
 <div class="well">
   <h4>Give them money:</h4>
   <label>Amount: $</label>
-  <input #newTotal>
+  <input [(ngModel)]='newFundage.total'>
   <button (click)='donateButton'>Give</button>
+  <p>{{newFundage.total}}</p>
 </div>
