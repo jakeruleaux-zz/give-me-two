@@ -25,7 +25,16 @@
         <br>
         <input #newSwag>
       </div>
-      <button (click)="submitForm(newTitle.value, newDescription.value, newFunding.value, newSwag.value); newTitle.value=''; newDescription.value=''; newFunding.value=''; newSwag.value=''; ">Add</button>
+
+      <div>
+        <label>Id:</label>
+        <br>
+        <input #newId>
+      </div>
+      <button (click)="submitForm(newTitle.value, newDescription.value, newFunding.value, newSwag.value, newId.value); newTitle.value=''; newDescription.value=''; newFunding.value=''; newSwag.value=''; newId.value=''; ">Add</button>
     </div>
   </div>
+</div>
+<div>
+  <app-animals></app-animals>
 </div>

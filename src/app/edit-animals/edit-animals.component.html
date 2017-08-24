@@ -1,0 +1,17 @@
+<h3>Edit Animals</h3>
+
+<label>New title:</label>
+<input [(ngModel)]='selectedAnimal.title'>
+<br>
+<label>New description:</label>
+<input [(ngModel)]='selectedAnimal.description'>
+<br>
+<label>New funding:</label>
+<input [(ngModel)]='selectedAnimal.funding'>
+<br>
+<label>New swag:</label>
+<input [(ngModel)]='selectedAnimal.swag'>
+<br>
+<button (click)="beginUpdatingCause(selectedAnimal)">Update</button>
+<hr>
+<button (click)="beginDeletingCause(selectedAnimal)">Delete</button>

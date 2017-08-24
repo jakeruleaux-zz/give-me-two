@@ -19,6 +19,19 @@ export class AnimalsService {
   getAnimalById(animalId) {
     return this.database.object('animals/' + animalId);
  }
+ updateCause(localUpdatedCause){
+    var causeEntryInFirebase = this.getAnimalById(localUpdatedCause.$key);
+    causeEntryInFirebase.update({title: localUpdatedCause.title,
+                                description: localUpdatedCause.description,
+                                funding: localUpdatedCause.funding,
+                                swag: localUpdatedCause.swag
+                                });
+  }
+
+  deleteCause(localCauseToDelete){
+   var causeEntryInFirebase = this.getAnimalById(localCauseToDelete.$key);
+   causeEntryInFirebase.remove();
+ }
 
  addAnimal(newAnimal: Cause) {
     this.animals.push(newAnimal);

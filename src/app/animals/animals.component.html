@@ -1,5 +1,12 @@
 <h2>Animal causes</h2>
 
-<div *ngFor='let animal of animals | async' (click)='goToAnimalDetailPage(animal)'>
-  <h4>{{animal.title}}</h4>
+<div *ngFor='let animal of animals | async'>
+  <h4 (click)='goToAnimalDetailPage(animal)'>{{animal.title}}</h4>  <div *ngIf="currentRoute === '/animal-admin'">
+    {{animal.title}}<br>
+    {{animal.description}}<br>
+    {{animal.funding}}<br>
+    {{animal.swag}}
+    <hr>
+    <app-edit-animals [selectedAnimal]='animal'></app-edit-animals>
+  </div>
 </div>

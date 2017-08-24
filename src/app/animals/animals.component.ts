@@ -12,7 +12,8 @@ import { FirebaseListObservable } from 'angularfire2/database';
 })
 export class AnimalsComponent implements OnInit {
   animals: FirebaseListObservable<any[]>;
-
+  currentRoute: string = this.router.url;
+  
   constructor(private router: Router, private animalsService: AnimalsService) { }
 
   ngOnInit() {
